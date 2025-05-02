@@ -1,0 +1,331 @@
+{
+    "users": [
+        {
+            "login": "gueyeprophete287@gmail.com",
+            "password": "Prophete10",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/monprofil.jpeg",
+            "profil": "admin"
+        },
+        {
+            "login": "gueyemohamed287@gmail.com",
+            "password": "mohamed10",
+            "profil": "apprenant",
+            "must_change_password": false
+        },
+        {
+            "login": "gueyeprophete287@gmail.com",
+            "password": "$2y$10$AdSSllIt01\/.S\/8i7Pj7RuV.WEdA3KtQbqAtw21dTOGhslNNzNUGe",
+            "profil": "apprenant",
+            "must_change_password": true
+        }
+    ],
+    "promotions": [
+        {
+            "nom": "Promotion 2025",
+            "date-debut": "05\/02\/2025",
+            "date-fin": "05\/11\/2025",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/hakeuse.jpg",
+            "status": "active",
+            "referentiels": [
+                "Developpement Web\/mobile",
+                "Hakeuse",
+                "Developpement Data",
+                "AWS",
+                "Ref Dig",
+                "Cyber Securite"
+            ],
+            "apprenants": [
+                {
+                    "matricule": "MAT647",
+                    "telephone": "753455423",
+                    "nom-complet": "Mohamed GUEYE",
+                    "email": "gueyemohamed287@gmail.com",
+                    "adresse": "Malika Plage",
+                    "referentiel": "Developpement Web\/mobile",
+                    "status": "actif",
+                    "photo": "assets\/images\/monprofil.jpeg",
+                    "password": "$2y$10$xGc5smVcOUkuU1TlugYdOu5dHhUycqGNGE22g0bucdrm9NBOCdu3u",
+                    "must_change_password": true
+                },
+                {
+                    "matricule": "MAT130",
+                    "telephone": "750118223",
+                    "nom-complet": "seyda mariama",
+                    "email": "seydamariama206@gmail.com",
+                    "adresse": "Zac Mbao",
+                    "referentiel": "Hakeuse",
+                    "status": "actif",
+                    "photo": "ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png",
+                    "password": "$2y$10$9QLFVLgrl5gR5N8PhOsSK..LQa3gT2M.5CqcW9xqGbsXL1cNgAxGa",
+                    "must_change_password": true
+                }
+            ]
+        },
+        {
+            "nom": "Promotion 2024",
+            "date-debut": "15\/01\/2024",
+            "date-fin": "13\/12\/2024",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png",
+            "status": "inactive",
+            "referentiels": [
+                "Developpement Data",
+                "Ref Dig"
+            ]
+        },
+        {
+            "nom": "Promotion 2023",
+            "date-debut": "15\/01\/2023",
+            "date-fin": "30\/11\/2023",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/web.jpg",
+            "status": "inactive",
+            "referentiels": [
+                "Ref Dig"
+            ]
+        },
+        {
+            "nom": "Promotion 2022",
+            "date-debut": "15\/01\/2022",
+            "date-fin": "12\/11\/2022",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/data.jpg",
+            "status": "inactive",
+            "referentiels": [
+                "Developpement Web\/mobile",
+                "AWS"
+            ]
+        },
+        {
+            "nom": "Promotion 2027",
+            "date-debut": "12\/01\/2021",
+            "date-fin": "31\/12\/2021",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/hakeuse.jpg",
+            "status": "inactive",
+            "referentiels": [
+                "Developpement Data",
+                "hhhd"
+            ]
+        },
+        {
+            "nom": "Promotion 2029",
+            "date-debut": "12\/01\/2029",
+            "date-fin": "30\/11\/2029",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png",
+            "status": "inactive",
+            "referentiels": [
+                "Hakeuse",
+                "Developpement Data",
+                "Cyber Securite"
+            ]
+        },
+        {
+            "nom": "Promotion 2030",
+            "date-debut": "12\/01\/2030",
+            "date-fin": "31\/12\/2030",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/8861110.png",
+            "status": "inactive",
+            "referentiels": [
+                "AWS",
+                "hhhd"
+            ]
+        },
+        {
+            "nom": "xxxx",
+            "date-debut": "01\/01\/2004",
+            "date-fin": "12\/07\/2008",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png",
+            "status": "inactive",
+            "referentiels": []
+        },
+        {
+            "nom": "fff",
+            "date-debut": "12\/05\/2345",
+            "date-fin": "13\/07\/4567",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/Capture d\u2019\u00e9cran du 2025-03-04 12-08-35.png",
+            "status": "inactive",
+            "referentiels": [
+                "Developpement Web\/mobile",
+                "Ref Dig"
+            ]
+        },
+        {
+            "nom": "Promotion 2026",
+            "date-debut": "12\/02\/2026",
+            "date-fin": "29\/11\/2026",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/Capture d\u2019\u00e9cran du 2025-03-04 12-08-06.png",
+            "status": "inactive",
+            "referentiels": [
+                "Developpement Web\/mobile",
+                "Ref Dig"
+            ]
+        },
+        {
+            "nom": "FFFFF",
+            "date-debut": "12\/02\/2024",
+            "date-fin": "12\/02\/2026",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/Capture d\u2019\u00e9cran du 2025-03-04 12-08-06.png",
+            "status": "inactive",
+            "referentiels": [
+                "Developpement Web\/mobile",
+                "Developpement Data",
+                "Ref Dig"
+            ]
+        }
+    ],
+    "referentiels": [
+        {
+            "nom": "Developpement Web\/mobile",
+            "description": "le referentiel developpement forme les futurs genie de la programmation ....",
+            "nombre-session": "1",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/web.jpg",
+            "capacite": 50
+        },
+        {
+            "nom": "Developpement Data",
+            "description": "alliant les competences en dev en data les .....",
+            "nombre-session": "1",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/data.jpg",
+            "capacite": 25
+        },
+        {
+            "nom": "Ref Dig",
+            "description": "la referentiels ref dig ou les cout......",
+            "nombre-session": "1",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/ref-dig.jpg",
+            "capacite": 55
+        },
+        {
+            "nom": "Hakeuse",
+            "description": "cet referentiel forme les futurs assistantes ......",
+            "nombre-session": "2",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/hakeuse.jpg",
+            "capacite": 25
+        },
+        {
+            "nom": "AWS",
+            "description": "les genie du cloud .....",
+            "nombre-session": "2",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/aws.jpg",
+            "capacite": 25
+        },
+        {
+            "nom": "Cyber Securite",
+            "description": "cet referentiel ........",
+            "nombre-session": "2",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/data.jpg",
+            "capacite": 25
+        },
+        {
+            "nom": "hhhd",
+            "description": "feeeeeeeeeeeeeeeeee",
+            "nombre-session": "1",
+            "photo": "\/ges-apprenant\/public\/assets\/images\/promotions\/ref-dig.jpg",
+            "capacite": 25
+        }
+    ],
+    "absences": [
+        {
+            "mat-apprenant": "MAT126",
+            "nom-complet": "seydina ndiaye",
+            "date": "20\/02\/2025",
+            "heure": "12h 50",
+            "motif": "maladie",
+            "justifie": false,
+            "photo": "assets\/images\/avatar-apprenant.png"
+        },
+        {
+            "mat-apprenant": "MAT837",
+            "nom-complet": "seydina ndiaye",
+            "date": "20\/02\/2025",
+            "heure": "12h 50",
+            "motif": "maladie",
+            "justifie": false,
+            "photo": "assets\/images\/avatar-apprenant.png"
+        },
+        {
+            "mat-apprenant": "MAT126",
+            "nom-complet": "seydina ndiaye",
+            "date": "20\/02\/2025",
+            "heure": "12h 50",
+            "motif": "maladie",
+            "justifie": false,
+            "photo": "assets\/images\/avatar-apprenant.png"
+        },
+        {
+            "mat-apprenant": "MAT647",
+            "nom-complet": "Mohamed GUEYE",
+            "date": "20\/02\/2025",
+            "heure": "12h 50",
+            "motif": "maladie",
+            "justifie": false,
+            "photo": "assets\/images\/monprofil.jpeg"
+        },
+        {
+            "mat-apprenant": "MAT837",
+            "nom-complet": "seydina ndiaye",
+            "date": "20\/02\/2025",
+            "heure": "12h 50",
+            "motif": "maladie",
+            "justifie": false,
+            "photo": "assets\/images\/avatar-apprenant.png"
+        },
+        {
+            "mat-apprenant": "MAT647",
+            "nom-complet": "Mohamed GUEYE",
+            "date": "20\/02\/2025",
+            "heure": "12h 50",
+            "motif": "maladie",
+            "justifie": false,
+            "photo": "assets\/images\/monprofil.jpeg"
+        },
+        {
+            "mat-apprenant": "MAT647",
+            "nom-complet": "Mohamed GUEYE",
+            "date": "20\/02\/2025",
+            "heure": "12h 50",
+            "motif": "maladie",
+            "justifie": false,
+            "photo": "assets\/images\/monprofil.jpeg"
+        }
+    ],
+    "attentes": [
+        {
+            "matricule": "MAT181",
+            "telephone": "753455423",
+            "nom-complet": "aminata sene",
+            "email": "gueyemohamed287@gmail.com",
+            "adresse": "tali bou makk",
+            "referentiel": "AWSs",
+            "status": "actif",
+            "photo": "ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png"
+        },
+        {
+            "matricule": "MAT902",
+            "telephone": "753455423",
+            "nom-complet": "aminata sene",
+            "email": "gueyemohamed287@gmail.com",
+            "adresse": "tali bou makk",
+            "referentiel": "AWSs",
+            "status": "actif",
+            "photo": "ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png"
+        },
+        {
+            "matricule": "MAT846",
+            "telephone": "750118223",
+            "nom-complet": "seyda mariama",
+            "email": "seydamariama206@gmail.com",
+            "adresse": "Zac Mbao",
+            "referentiel": "Hakeuse",
+            "status": "actif",
+            "photo": "ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png"
+        },
+        {
+            "matricule": "MAT246",
+            "telephone": "753455423",
+            "nom-complet": "aminata sene",
+            "email": "gueyemohamed287@gmail.com",
+            "adresse": "tali bou makk",
+            "referentiel": "AWSs",
+            "status": "actif",
+            "photo": "ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png"
+        }
+    ]
+}
