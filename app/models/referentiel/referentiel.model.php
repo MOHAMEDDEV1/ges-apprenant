@@ -43,7 +43,7 @@ NAME_FUNCTION::LISTER_REFERENTIELS_PROMO_ENCOURS->value => function (): array {
     $promotion = $PromotionServices[NAME_FUNCTION::RECUPERER_PROMOTION_EN_COURS->value]();
 
     if (!$promotion || !isset($promotion['referentiels'])) {
-        return []; // retourne liste vide si pas de référentiels
+        return []; 
     }
 
     return $promotion['referentiels'];

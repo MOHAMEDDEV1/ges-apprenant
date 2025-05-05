@@ -46,7 +46,7 @@ function liste_promotions(): void {
         'status' => $filtrer_status,
         'query' => $query,
         'menu' => 'promotion',
-        // 'action' => 'lister'
+    
     ];
 
     if (!empty($filtre_referentiel)) {

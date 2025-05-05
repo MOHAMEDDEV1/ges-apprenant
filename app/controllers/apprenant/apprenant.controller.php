@@ -5,6 +5,7 @@ require_once __DIR__ ."/../../models/apprenant/attente.model.php";
 require_once __DIR__ . '/../../libs/src/SimpleXLSX.php';
 require_once __DIR__ .'/../error.controller.php';
 require_once __DIR__ .'/../../libs/src/phpqrcode/qrlib.php';
+require_once __DIR__ .'/../../models/statistique/stats.model.php';
 
 
 use function App\Controllers\BaseControllers\redirect_to;
@@ -55,7 +56,7 @@ function upload_excel(){
 }
 
 function lister_apprenants(){
-    global $ApprenantServices, $SessionService;
+    global $ApprenantServices, $SessionService, $StatistiqueService;
     $apprenants = $ApprenantServices[NAME_FUNCTION::LISTER_APPRENANTS->value]();  
     
     $filtre_referentiel = $SessionService[SESSION::GET->value]('referentiel', '');
@@ -90,8 +91,9 @@ function lister_apprenants(){
             return stripos($promo['nom-complet'], $query) !== false;
         });
     }
+    $nomPromoActive = $StatistiqueService[NAME_FUNCTION::RECUPERER_NOM_PROMO_ACTIVE->value]();
 
-    
+    $stats = $StatistiqueService[NAME_FUNCTION::CALCULER_STATISTIQUES_PROMOTION_ACTIVE->value]();
 
   
     $page = $SessionService[SESSION::GET->value]('page',1);
@@ -104,6 +106,8 @@ function lister_apprenants(){
         'referentiel' => $filtre_referentiel,
         'referentiels' => $referentiels, 
         'pagination' => $resultat['pagination'],
+        'nomPromoActive' => $nomPromoActive,
+        'stats' => $stats
     ]);
 }
 

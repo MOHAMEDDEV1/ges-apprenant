@@ -287,45 +287,6 @@
         }
     ],
     "attentes": [
-        {
-            "matricule": "MAT181",
-            "telephone": "753455423",
-            "nom-complet": "aminata sene",
-            "email": "gueyemohamed287@gmail.com",
-            "adresse": "tali bou makk",
-            "referentiel": "AWSs",
-            "status": "actif",
-            "photo": "ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png"
-        },
-        {
-            "matricule": "MAT902",
-            "telephone": "753455423",
-            "nom-complet": "aminata sene",
-            "email": "gueyemohamed287@gmail.com",
-            "adresse": "tali bou makk",
-            "referentiel": "AWSs",
-            "status": "actif",
-            "photo": "ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png"
-        },
-        {
-            "matricule": "MAT846",
-            "telephone": "750118223",
-            "nom-complet": "seyda mariama",
-            "email": "seydamariama206@gmail.com",
-            "adresse": "Zac Mbao",
-            "referentiel": "Hakeuse",
-            "status": "actif",
-            "photo": "ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png"
-        },
-        {
-            "matricule": "MAT246",
-            "telephone": "753455423",
-            "nom-complet": "aminata sene",
-            "email": "gueyemohamed287@gmail.com",
-            "adresse": "tali bou makk",
-            "referentiel": "AWSs",
-            "status": "actif",
-            "photo": "ges-apprenant\/public\/assets\/images\/promotions\/78HwybxT b5n REJ8ZKgDJygAAAABJRU.png"
-        }
+       
     ]
 }

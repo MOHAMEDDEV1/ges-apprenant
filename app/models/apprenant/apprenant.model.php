@@ -21,16 +21,7 @@ $ApprenantServices = [
       return [];
   },
 
-  NAME_FUNCTION::INSCRIRE_APPRENANT->value => function (
-   string $matricule,
-   string $telephone,
-   string $nomComplet,
-   string $email,
-   string $adresse,
-   string $referentiel,
-   string $status = 'actif',
-   string $photo = null
-): array {
+  NAME_FUNCTION::INSCRIRE_APPRENANT->value => function (string $matricule,string $telephone,string $nomComplet,string $email,string $adresse,string $referentiel,string $status = 'actif',string $photo = null): array {
    global $PromotionServices, $JsonService,$ApprenantServices;
    
    $data = $JsonService[NAME_FUNCTION::JSON_TO_ARRAY->value]();
@@ -91,6 +82,75 @@ $ApprenantServices = [
 },
 
 
+// NAME_FUNCTION::INSCRIRE_APPRENANT->value => function (string $matricule, string $telephone, string $nomComplet, string $email, string $adresse, string $referentiel, string $status = 'actif', string $photo = null): array {
+//     global $PromotionServices, $JsonService, $ApprenantServices;
+    
+//     $data = $JsonService[NAME_FUNCTION::JSON_TO_ARRAY->value]();
+    
+//     // Initialiser les tableaux si nécessaire
+//     if (!isset($data['promotions']) || !is_array($data['promotions'])) {
+//         $data['promotions'] = [];
+//     }
+    
+//     if (!isset($data['users']) || !is_array($data['users'])) {
+//         $data['users'] = [];
+//     }
+    
+//     $PromotionEnCours = $PromotionServices[NAME_FUNCTION::RECUPERER_PROMOTION_EN_COURS->value]();
+    
+//     // Vérifier si une promotion en cours existe
+//     if (!isset($PromotionEnCours)) {
+//         return [];
+//     }
+    
+//     // Trouver l'index de la promotion en cours
+//     $promotionIndex = array_search($PromotionEnCours, array_column($data['promotions'], 'id'));
+    
+//     if ($promotionIndex === false) {
+//         return [];
+//     }
+    
+//     // Assurez-vous que le tableau d'apprenants existe
+//     if (!isset($data['promotions'][$promotionIndex]['apprenants']) || !is_array($data['promotions'][$promotionIndex]['apprenants'])) {
+//         $data['promotions'][$promotionIndex]['apprenants'] = [];
+//     }
+    
+//     // Créer le nouvel apprenant
+//     $motDePasseTemporaire = 'Apprenant@2025';
+//     $passwordHash = password_hash($motDePasseTemporaire, PASSWORD_DEFAULT);
+    
+//     $nouvelApprenant = [
+//         'matricule' => $matricule,
+//         'telephone' => $telephone,
+//         'nom-complet' => $nomComplet,
+//         'email' => $email,
+//         'adresse' => $adresse,
+//         'referentiel' => $referentiel,
+//         'status' => $status,
+//         'photo' => $photo ?? "/ges-apprenant/public/assets/images/avatar-apprenant.png",
+//         'password' => $passwordHash,
+//         'must_change_password' => true
+//     ];
+    
+   
+//     $data['promotions'][$promotionIndex]['apprenants'][] = $nouvelApprenant;
+    
+ 
+//     $data['users'][] = [
+//         'login' => $email,
+//         'password' => $passwordHash,
+//         'profil' => 'apprenant',
+//         'must_change_password' => true
+//     ];
+    
+
+//     $JsonService[NAME_FUNCTION::ARRAY_TO_JSON->value]($data);
+    
+//     $ApprenantServices["envoyer_mail_apprenant"]($email, $email, $motDePasseTemporaire);
+    
+//     return $nouvelApprenant;
+// },
+
 "envoyer_mail_apprenant" => function ($toEmail, $login, $motDePasse) {
     $mail = new PHPMailer(true);
 
@@ -133,23 +193,10 @@ $ApprenantServices = [
   
 },
 
-NAME_FUNCTION::GENERER_MATRICULE->value  => function(): string {
-   return (string) "MAT" . rand(100, 999);
-},
+    NAME_FUNCTION::GENERER_MATRICULE->value  => function(): string {
+    return (string) "MAT" . rand(100, 999);
+    },
  
-   "rechercher_mat_apprenant" => function (string $matricule):?string{
-        global $ApprenantServices;
-
-        $apprenants = $ApprenantServices[NAME_FUNCTION::LISTER_APPRENANTS->value]();
-
-        foreach($apprenants as $apprenant){
-         if($matricule == $apprenant["matricule"]){
-            return $apprenant;
-         }
-        }
-        return null;
-   },
-
    NAME_FUNCTION::RECHERCHER_APPRENANT_PAR_EMAIL-> value => function($query):array{
       global $ApprenantServices;
   
@@ -161,31 +208,53 @@ NAME_FUNCTION::GENERER_MATRICULE->value  => function(): string {
   
    },
 
-   NAME_FUNCTION::LISTER_APPRENANT_PAR_MATRICULE->value => function (string $matricule){
-      global $ApprenantServices;
+   NAME_FUNCTION::LISTER_APPRENANT_PAR_MATRICULE->value => function (string $matricule) {
+    global $ApprenantServices;
+    $apprenants = $ApprenantServices[NAME_FUNCTION::LISTER_APPRENANTS->value]();
+    
+    $result = array_filter($apprenants, function($apprenant) use ($matricule) {
+        return $apprenant['matricule'] === $matricule;
+    });
+    
+    return !empty($result) ? reset($result) : null;
+},
 
-      $apprenants =  $ApprenantServices[NAME_FUNCTION::LISTER_APPRENANTS->value]();
+NAME_FUNCTION::RECUPERER_APPRENANT_PAR_EMAIL->value => function (string $email) {
+    global $ApprenantServices;
+    $apprenants = $ApprenantServices[NAME_FUNCTION::LISTER_APPRENANTS->value]();
+    
+    $result = array_filter($apprenants, function($apprenant) use ($email) {
+        return $apprenant['email'] === $email;
+    });
+    
+    return !empty($result) ? reset($result) : null;
+}
 
-      foreach($apprenants as $apprenant){
-        if($apprenant['matricule'] == $matricule){
-           return $apprenant;
-        }
-      }
-      return null;
-   },
+//    NAME_FUNCTION::LISTER_APPRENANT_PAR_MATRICULE->value => function (string $matricule){
+//       global $ApprenantServices;
 
-   NAME_FUNCTION::RECUPERER_APPRENANT_PAR_EMAIL->value => function (string $email){
-      global $ApprenantServices;
+//       $apprenants =  $ApprenantServices[NAME_FUNCTION::LISTER_APPRENANTS->value]();
 
-      $apprenants = $ApprenantServices[NAME_FUNCTION::LISTER_APPRENANTS->value]();
+//       foreach($apprenants as $apprenant){
+//         if($apprenant['matricule'] == $matricule){
+//            return $apprenant;
+//         }
+//       }
+//       return null;
+//    },
+
+//    NAME_FUNCTION::RECUPERER_APPRENANT_PAR_EMAIL->value => function (string $email){
+//       global $ApprenantServices;
+
+//       $apprenants = $ApprenantServices[NAME_FUNCTION::LISTER_APPRENANTS->value]();
       
-      foreach($apprenants as $apprenant){
-         if($apprenant['email'] == $email){
-            return $apprenant;
-         }
-      }
-      return null;
-   }
+//       foreach($apprenants as $apprenant){
+//          if($apprenant['email'] == $email){
+//             return $apprenant;
+//          }
+//       }
+//       return null;
+//    }
 
      
    
