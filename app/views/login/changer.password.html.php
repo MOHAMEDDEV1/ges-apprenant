@@ -74,7 +74,7 @@
                 </div>
                 
                 <div class="forgot-password">
-                    <!-- <a href="#">Mot de passe oublié ?</a> -->
+            
                 </div>
                 
                 <button type="submit"  class="btn-login">Changer password &nbsp;›</button>
@@ -85,7 +85,7 @@
             </form>
         </div>
 
-        <!-- Address Bar -->
+      
         <div class="address-bar">
             <div style="display:flex; align-items:center;">
                 <span style="margin-right:8px;">Aa</span>
@@ -99,7 +99,7 @@
             </div>
         </div>
 
-        <!-- Mobile Navigation -->
+      
         <div class="mobile-nav">
             <div class="nav-item">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

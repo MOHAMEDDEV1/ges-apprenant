@@ -32,23 +32,16 @@ $RetenuServices = [
     },
 
     NAME_FUNCTION::RECUPERER_APPRENANT_ATTENTE->value => function (string $matricule){
-          global $RetenuServices;   
-
-          $attentes = $RetenuServices[NAME_FUNCTION::LISTE_DES_ATTENTES->value]();
-
-          foreach($attentes as $attente){
-            if($attente['matricule'] == $matricule){
-                return $attente;
-            }
-          }
-          return null;
-    }
-
-
-
+        global $RetenuServices;   
     
-                       
-
-
+        $attentes = $RetenuServices[NAME_FUNCTION::LISTE_DES_ATTENTES->value]();
+        
+       
+        $result = array_values(array_filter($attentes, function($attente) use ($matricule) {
+            return $attente['matricule'] == $matricule;
+        }));
+        
+        return !empty($result) ? $result[0] : null;
+    }     
 
 ];

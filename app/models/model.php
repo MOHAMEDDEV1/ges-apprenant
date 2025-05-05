@@ -27,9 +27,6 @@ $JsonService = [
         return  (file_put_contents($PATH_JSON, json_encode($tab, JSON_PRETTY_PRINT))==true);
     },
 
-    // "session" => function(string $key , string $defaul = null){
-    //     return $_SESSION[$key] ?? $defaul;
-    // },
 ];
 
 
